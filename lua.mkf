@@ -2,18 +2,17 @@ upstream
 {
 	#original: http://www.lua.org/ftp/lua-5.1.4.tar.gz
 	url="http://source.ideaworkslabs.com/upstream/lua-5.1.4.tar.gz"
-	local=modified
 }
 
 includepath
 {
-	modified\src
+	"upstream/src"
 }
 
 files
 {
 	[Source,lua]
-	("modified/src")
+	("upstream/src")
 	llex.c
 	lparser.c
 	lcode.c
@@ -59,7 +58,7 @@ files
 	print.c
 
 	["Libs"]
-	("modified\src")
+	("upstream/src")
 	lauxlib.c
 	lbaselib.c
 	ltablib.c
@@ -71,7 +70,7 @@ files
 #	lmathlib_fixed.c # No point having math library if we're only using integers!
 
 	["Public headers"]
-	("upstream\src")
+	("upstream/src")
 	lauxlib.h
 	lua.h
 	lualib.h
