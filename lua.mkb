@@ -1,0 +1,10 @@
+#!/usr/bin/env mkb
+package lua
+
+subproject lua
+
+files
+{
+	("modified/src")
+	lua.c
+}

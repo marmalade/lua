@@ -1,0 +1,78 @@
+upstream
+{
+	#original: http://www.lua.org/ftp/lua-5.1.4.tar.gz
+	url="http://source.ideaworkslabs.com/upstream/lua-5.1.4.tar.gz"
+	local=modified
+}
+
+includepath
+{
+	modified\src
+}
+
+files
+{
+	[Source,lua]
+	("modified/src")
+	llex.c
+	lparser.c
+	lcode.c
+	lapi.h
+	lcode.h
+	ldebug.h
+	ldo.h
+	lfunc.h
+	lgc.h
+	llex.h
+	llimits.h
+	linit.c
+	lmem.h
+	lobject.h
+	lopcodes.h
+	lparser.h
+	lstate.h
+	lstring.h
+	ltable.h
+	ltm.h
+	lundump.h
+	lvm.h
+	lzio.h
+	luaconf.h
+
+	ldo.c
+	lapi.c
+	ldebug.c
+	ldump.c
+	lfunc.c
+	lgc.c
+	lmem.c
+	lobject.c
+	lopcodes.c
+	lstate.c
+	lstring.c
+	ltable.c
+#	ltests.c
+	ltm.c
+	lundump.c
+	lvm.c
+	lzio.c
+	print.c
+
+	["Libs"]
+	("modified\src")
+	lauxlib.c
+	lbaselib.c
+	ltablib.c
+	liolib.c
+	lstrlib.c
+	lmathlib.c # No point having math library if we're only using integers!
+#	ldblib.c
+	loadlib.c
+#	lmathlib_fixed.c # No point having math library if we're only using integers!
+
+	["Public headers"]
+	("upstream\src")
+	lauxlib.h
+	lua.h
+	lualib.h
+}
