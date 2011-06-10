@@ -577,7 +577,9 @@ LUALIB_API int luaL_loadfile (lua_State *L, const char *filename) {
    while ((c = getc(lf.f)) != EOF && c != LUA_SIGNATURE[0]) ;
     lf.extraline = 0;
   }
-  ungetc(c, lf.f);
+  fseek(lf.f,-1,SEEK_CUR);
+ // ungetc(c, lf.f);
+
   status = lua_load(L, getF, &lf, lua_tostring(L, -1));
   readstatus = ferror(lf.f);
   if (filename) fclose(lf.f);  /* close file (even in case of errors) */
