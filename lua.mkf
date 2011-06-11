@@ -1,7 +1,7 @@
 upstream
 {
 	#original: http://www.lua.org/ftp/lua-5.1.4.tar.gz
-	url="http://source.ideaworkslabs.com/upstream/lua-5.1.4.tar.gz"
+	url="http://source.madewithmarmalade.com/upstream/lua-5.1.4.tar.gz"
 }
 
 includepath
