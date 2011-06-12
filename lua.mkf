@@ -1,77 +1,78 @@
 upstream
 {
-	#original: http://www.lua.org/ftp/lua-5.1.4.tar.gz
-	url="http://source.madewithmarmalade.com/upstream/lua-5.1.4.tar.gz"
+    #original: http://www.lua.org/ftp/lua-5.1.4.tar.gz
+    url="http://source.madewithmarmalade.com/upstream/lua-5.1.4.tar.gz"
+    checkin=git
 }
 
 includepath
 {
-	"upstream/src"
+    "upstream/src"
 }
 
 files
 {
-	[Source,lua]
-	("upstream/src")
-	llex.c
-	lparser.c
-	lcode.c
-	lapi.h
-	lcode.h
-	ldebug.h
-	ldo.h
-	lfunc.h
-	lgc.h
-	llex.h
-	llimits.h
-	linit.c
-	lmem.h
-	lobject.h
-	lopcodes.h
-	lparser.h
-	lstate.h
-	lstring.h
-	ltable.h
-	ltm.h
-	lundump.h
-	lvm.h
-	lzio.h
-	luaconf.h
+    [Source,lua]
+    ("upstream/src")
+    llex.c
+    lparser.c
+    lcode.c
+    lapi.h
+    lcode.h
+    ldebug.h
+    ldo.h
+    lfunc.h
+    lgc.h
+    llex.h
+    llimits.h
+    linit.c
+    lmem.h
+    lobject.h
+    lopcodes.h
+    lparser.h
+    lstate.h
+    lstring.h
+    ltable.h
+    ltm.h
+    lundump.h
+    lvm.h
+    lzio.h
+    luaconf.h
 
-	ldo.c
-	lapi.c
-	ldebug.c
-	ldump.c
-	lfunc.c
-	lgc.c
-	lmem.c
-	lobject.c
-	lopcodes.c
-	lstate.c
-	lstring.c
-	ltable.c
-#	ltests.c
-	ltm.c
-	lundump.c
-	lvm.c
-	lzio.c
-	print.c
+    ldo.c
+    lapi.c
+    ldebug.c
+    ldump.c
+    lfunc.c
+    lgc.c
+    lmem.c
+    lobject.c
+    lopcodes.c
+    lstate.c
+    lstring.c
+    ltable.c
+#   ltests.c
+    ltm.c
+    lundump.c
+    lvm.c
+    lzio.c
+    print.c
 
-	["Libs"]
-	("upstream/src")
-	lauxlib.c
-	lbaselib.c
-	ltablib.c
-	liolib.c
-	lstrlib.c
-	lmathlib.c # No point having math library if we're only using integers!
-#	ldblib.c
-	loadlib.c
-#	lmathlib_fixed.c # No point having math library if we're only using integers!
+    ["Libs"]
+    ("upstream/src")
+    lauxlib.c
+    lbaselib.c
+    ltablib.c
+    liolib.c
+    lstrlib.c
+    lmathlib.c # No point having math library if we're only using integers!
+#   ldblib.c
+    loadlib.c
+#   lmathlib_fixed.c # No point having math library if we're only using integers!
 
-	["Public headers"]
-	("upstream/src")
-	lauxlib.h
-	lua.h
-	lualib.h
+    ["Public headers"]
+    ("upstream/src")
+    lauxlib.h
+    lua.h
+    lualib.h
 }

@@ -1,34 +1,21 @@
 Package: lua
 Version: 5.1.4
-Revision: 2
+Revision: 3
 Maintainer: Marmalade Package Team <packages@ideaworkslabs.com>
 Mkbs: lua.mkf
+Libraries: lua
 Description: |
  zlib library for creating and reading zlib compressed data.
 Contents:
- - modified/src/lua.h : h/lua.h
- - modified/src/luaconf.h : h/luaconf.h
- - modified/src/lualib.h : h/lualib.h
- - modified/src/lauxlib.h : h/lauxlib.h
- - lib/arm/lua.a
- - lib/arm/lua_d.a
- - lib/arm/liblua_d.a
- - lib/arm/liblua.a
-Contents-src:
+ - upstream/src/lua.h : h/lua.h
+ - upstream/src/luaconf.h : h/luaconf.h
+ - upstream/src/lualib.h : h/lualib.h
+ - upstream/src/lauxlib.h : h/lauxlib.h
+Contents-Source:
  - README.txt
  - data/app.icf
  - lua.mkf
  - lua.mkb
- - modified/src/lauxlib.c
- - modified/src/linit.c
- - modified/src/liolib.c
-Contents-platform:
-  win32:
-    - lib/x86/lua.lib
-    - lib/x86/lua_d.lib
-  linux:
-    - lib/x86/linux/liblua.a
-    - lib/x86/linux/liblua_d.a
-  macosx:
-    - lib/x86/darwin/liblua.a
-    - lib/x86/darwin/liblua_d.a
+ - upstream/src/lauxlib.c
+ - upstream/src/linit.c
+ - upstream/src/liolib.c

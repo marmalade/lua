@@ -2,4 +2,6 @@ build_*
 run_*
 upstream
 lua-*.tar.gz
+lua_*.msrc
+lua_*.mdev
 lib
