@@ -1,0 +1,6 @@
+lua (5.1.4-4)
+
+  * Add changelog
+  * Remove Revision and Version fields from package.yml
+
+ -- Sam Clegg <sam@marmalademail.com>  Tue, 02 Aug 2011 23:34:26 +0000
