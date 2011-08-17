@@ -5,6 +5,6 @@ subproject lua
 
 files
 {
-    ("modified/src")
+    ("upstream/src")
     lua.c
 }
